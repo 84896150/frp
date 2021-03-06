@@ -20,7 +20,9 @@ jobs:
       - name: Make All
         run: |
           ./package.sh
-          sudo mv -rf /home/runner/work/frp/frp/release/frpc_linux_mipsle /opt/images/ 
+          pwd
+          ls
+          sudo mv -f frpc_linux_mipsle /opt/images/ 
       
       - name : Upload packages
         uses: actions/upload-artifact@master
