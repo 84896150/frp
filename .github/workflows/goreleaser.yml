@@ -17,7 +17,6 @@ jobs:
           
       - name: Clone source code
         run: | 
-          go env -w GOPROXY=https://goproxy.cn
           go get github.com/fatedier/frp
           pwd  
           ls /home/runner/go/src/github.com/fatedier/frp
