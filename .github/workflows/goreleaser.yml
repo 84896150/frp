@@ -22,6 +22,7 @@ jobs:
           ./package.sh
           pwd
           ls /home/runner/work/frp/frp/release
+          mkdir -p /opt/images/
           sudo mv -f release/frpc_linux_mipsle /opt/images/ 
       
       - name : Upload packages
