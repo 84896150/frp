@@ -21,8 +21,8 @@ jobs:
         run: |
           ./package.sh
           pwd
-          ls
-          sudo mv -f frpc_linux_mipsle /opt/images/ 
+          ls /home/runner/work/frp/frp/release
+          sudo mv -f release/frpc_linux_mipsle /opt/images/ 
       
       - name : Upload packages
         uses: actions/upload-artifact@master
