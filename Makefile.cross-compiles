@@ -8,4 +8,3 @@ build: app
 
 app:
 	env CGO_ENABLED=0 GOOS=linux GOARCH=mipsle GOMIPS=softfloat go build -trimpath -ldflags "$(LDFLAGS)" -o ./release/frpc_linux_mipsle ./cmd/frpc
-	env CGO_ENABLED=0 GOOS=linux GOARCH=mipsle GOMIPS=softfloat go build -trimpath -ldflags "$(LDFLAGS)" -o ./release/frps_linux_mipsle ./cmd/frps
