@@ -20,7 +20,7 @@ jobs:
       - name: Make All
         run: |
           ./package.sh
-          sudo cp -f /home/runner/work/frp/frp/release/ /opt/images/
+          ls /home/runner/work/frp/frp/release/
       
       - name : Upload packages
         uses: actions/upload-artifact@master
