@@ -20,19 +20,13 @@ jobs:
       - name: Make All
         run: |
           ./package.sh
-          sudo mv -f images/*.trx /opt/images/
-    
-       - name : Upload packages
+          sudo mv -f /home/runner/work/frp/frp/release/. /opt/images/
+      
+      - name : Upload packages
         uses: actions/upload-artifact@master
         if: always()
         with:
           name: Padavan-packages
           path: /opt/images
 
-      - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v2
-        with:
-          version: latest
-          args: release --rm-dist --release-notes=./Release.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GPR_TOKEN }}
+      
