@@ -22,14 +22,14 @@ jobs:
           ./package.sh
           pwd
           ls /home/runner/work/frp/frp/release
-          mkdir -p /opt/images/
-          sudo mv -f release/frpc_linux_mipsle /opt/images/ 
+#mkdir -p /opt/images/
+#sudo mv -f release/frpc_linux_mipsle /opt/images/ 
       
-      - name : Upload packages
+      - name : Upload frp
         uses: actions/upload-artifact@master
         if: always()
         with:
-          name: Padavan-packages
-          path: /opt/images
+          name: Frp-packages
+          path: /home/runner/work/frp/frp/release
 
       
